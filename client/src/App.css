@@ -1,8 +1,16 @@
-/* .landingpage {
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  scroll-behaviour: smooth;
+}
+.landingpage {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
     url("./assets/img1.jpg");
-  height: 100vh;
+  /*background: linear-gradient(135deg, #8a2387, #e94057, #f27121);*/
+  min-height: 100vh;
+  width: 100vw;
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
-} */
+}
