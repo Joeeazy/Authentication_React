@@ -1,0 +1,17 @@
+ server side sessions
+--> after logging in --> server sets a cookie called a "session_id". "session_id" --> refers to the session in which you are currently logged in
+
+everytime a client makes request --> server recieves that session's "session_id"
+
+server will check for any session which refers to the session_id
+
+if there is a session with that id you're authenitcated
+
+
+requirements
+    create a venv => python -m venv venv
+    activate the venv => venv\Scripts\activate
+install
+    flask => pip install flask
+    flask-sqlalchemy => pip install Flask-SQLAlchemy
+    flask-bcrypt => pip install flask-bcrypt
