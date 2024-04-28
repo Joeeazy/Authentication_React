@@ -14,3 +14,11 @@
   background-size: cover;
   background-attachment: fixed;
 }
+.content-wrapper {
+  position: fixed; /* Fix the content wrapper */
+  top: 0; /* Align content wrapper to top of viewport */
+  left: 0; /* Align content wrapper to left of viewport */
+  width: 100%; /* Occupy full width of viewport */
+  height: 100%; /* Occupy full height of viewport */
+  overflow-y: auto; /* Enable vertical scrolling if content overflows */
+}
