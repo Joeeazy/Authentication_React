@@ -22,3 +22,13 @@
   height: 100%; /* Occupy full height of viewport */
   overflow-y: auto; /* Enable vertical scrolling if content overflows */
 }
+.loginpage {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("./assets/img1.jpg");
+  /*background: linear-gradient(135deg, #8a2387, #e94057, #f27121);*/
+  min-height: 100vh;
+  width: 100vw;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}

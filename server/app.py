@@ -2,19 +2,21 @@ from flask import Flask, request, session, jsonify
 from models import db, User
 from config import AppConfig
 from flask_session import Session
-from flask_bcrypt import Bcrypt 
+from flask_bcrypt import Bcrypt
+from flask_cors import CORS , cross_origin
 
 app = Flask(__name__)
 app.config.from_object(AppConfig)
 server_session = Session(app)
 bcrypt = Bcrypt(app)
-
+CORS(app, supports_credentials=True) 
 #initialize the application instance
 db.init_app(app)
 
 #create an app context?
 with app.app_context():
     db.create_all()
+
 
 #get current user route return info on the current logged in user
 @app.route("/@me", methods=["GET"])
@@ -32,6 +34,7 @@ def get_current_user():
         "id": user.id,
         "email": user.email
     })
+
 
 #register user route
 @app.route("/register", methods=["POST"])

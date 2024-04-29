@@ -2,12 +2,17 @@ import logo from "../assets/logo.jpeg";
 import { navItems } from "../constraints/Index";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function Header() {
   const [mobileDrawerOpen, setMobileDrawerOpen] = useState(false);
 
   const toggleNavbar = () => {
     setMobileDrawerOpen(!mobileDrawerOpen);
+  };
+
+  const register = (e) => {
+    <Link to={"/register"}></Link>;
   };
 
   return (
@@ -21,16 +26,95 @@ export default function Header() {
             </h1>
           </div>
           <div className="hidden lg:flex justify-center space-x-12 items-center">
-            <h4>Gym Features</h4>
-            <h4>Gym Locations</h4>
-            <h4>Gym Pricing</h4>
-            <h4>Testimonials</h4>
+            <div className="dropdown">
+              <div
+                tabIndex={0}
+                role="button"
+                className="btn m-1 bg-gradient-to-r from-orange-500 to-red-800 text-transparent bg-clip-text"
+              >
+                Gym Features
+              </div>
+              <ul
+                tabIndex={0}
+                className="dropdown-content z-[1] menu p-2 shadow rounded-box w-52"
+              >
+                <li>
+                  <a>Swimming Pools</a>
+                </li>
+                <li>
+                  <a>Outdooor Activites</a>
+                </li>
+              </ul>
+            </div>
+            <div className="dropdown">
+              <div
+                tabIndex={0}
+                role="button"
+                className="btn m-1 bg-gradient-to-r from-orange-500 to-red-800 text-transparent bg-clip-text"
+              >
+                Gym Locations
+              </div>
+              <ul
+                tabIndex={0}
+                className="dropdown-content z-[1] menu p-2 shadow rounded-box w-52"
+              >
+                <li>
+                  <a>Nairobi</a>
+                </li>
+                <li>
+                  <a>Mombasa</a>
+                </li>
+              </ul>
+            </div>
+
+            <div className="dropdown">
+              <div
+                tabIndex={0}
+                role="button"
+                className="btn m-1 bg-gradient-to-r from-orange-500 to-red-800 text-transparent bg-clip-text"
+              >
+                Gym Pricing
+              </div>
+              <ul
+                tabIndex={0}
+                className="dropdown-content z-[1] menu p-2 shadow rounded-box w-52"
+              >
+                <li>
+                  <a>Beginner</a>
+                </li>
+                <li>
+                  <a>Intermediate</a>
+                </li>
+              </ul>
+            </div>
+            <div className="dropdown">
+              <div
+                tabIndex={0}
+                role="button"
+                className="btn m-1 bg-gradient-to-r from-orange-500 to-red-800 text-transparent bg-clip-text"
+              >
+                Testimonials
+              </div>
+              <ul
+                tabIndex={0}
+                className="dropdown-content z-[1] menu p-2 shadow rounded-box w-52"
+              >
+                <li>
+                  <a>Trainer A</a>
+                </li>
+                <li>
+                  <a>Trainer B</a>
+                </li>
+              </ul>
+            </div>
           </div>
           <div className="hidden lg:flex justify-center space-x-12 items-center">
-            <button className="btn btn-outline btn-warning mr-4">
+            <Link to="/register" className="btn btn-outline btn-warning mr-4">
               Create an account
-            </button>
-            <button className="btn btn-outline btn-error">Login</button>
+            </Link>
+            <Link to="/login" className="btn btn-outline btn-error">
+              Login
+            </Link>
           </div>
 
           <div className="lg:hidden md:flex flex-col justify-end">
@@ -42,7 +126,7 @@ export default function Header() {
         {mobileDrawerOpen && (
           <div className="fixed right-0 z-20 bg-gradient-to-r text-xl text-black from-slate-400 to-slate-300 w-full p-12 flex flex-col justify-center items-center lg:hidden">
             <ul>
-              <li>Gym Features</li>
+              <li>Gym features</li>
               <li>Gym Locations</li>
               <li>Gym Pricing</li>
               <li>Testimonials</li>

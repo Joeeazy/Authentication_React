@@ -1,5 +1,6 @@
 import gym2 from "../assets/gym2.jpg";
 import gym1 from "../assets/gym1.jpg";
+import { Link } from "react-router-dom";
 
 export default function Features() {
   return (
@@ -22,12 +23,12 @@ export default function Features() {
         </div>
       </div>
       <div className="flex justify-center my-10">
-        <a
-          href="#"
-          className="bg-gradient-to-r  from-red-600 to-red-400 py-3 px-4 mx-5 rounded-md"
+        <Link
+          to="/register"
+          className="bg-gradient-to-r from-red-600 to-red-400 py-3 px-4 mx-5 rounded-md"
         >
           Start for free
-        </a>
+        </Link>
         <a
           href="#"
           className="py-3 px-4 mx-5 rounded-md border bg-black bg-opacity-50"
