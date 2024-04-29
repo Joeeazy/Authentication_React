@@ -1,5 +1,9 @@
+// Import Axios
 import axios from "axios";
 
-export default axios.create({
+// Create Axios instance with credentials enabled
+const HttpClient = axios.create({
   withCredentials: true,
 });
+
+export default HttpClient;
